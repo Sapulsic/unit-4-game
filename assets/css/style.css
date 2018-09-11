@@ -1,0 +1,84 @@
+*, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html, body {
+    min-height: 100vh;
+    background: url(../images/BG.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+body {
+    display: flex;
+    /* left: 10%; */
+    margin: 0 auto;
+    font-family: 'Quicksand', sans-serif;
+}
+
+
+/* ///////////////// */
+/* ELEMENT COLLECTOR */
+/* ///////////////// */
+
+
+#elementCollector {
+    background-color: rgba(255, 255, 255, 0.37);
+    /* border: 3px solid black; */
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    margin: 5% 25%;
+    /* padding: 15px 0; */
+    flex: 1;
+    /* left: -20%; */
+    border-radius: 25px;
+}
+
+#randomNum {
+    background-color: rgba(192, 192, 192, 0.60);
+    width: 25%;
+    text-align: center;
+    padding: 7.5%;
+    margin: 5px auto;
+    order: 2;
+    font-size: 1.5em;
+}
+
+#wonLoss {
+    background-color: rgba(0, 255, 255, 0.60);
+    width: 25%;
+    padding: 7.5%;
+    margin: 5px auto 25px;
+    order: 2;
+}
+
+#elements {
+    order: 3;
+}
+
+#elementCollector #elements #air, 
+#earth, 
+#water, 
+#fire {
+    margin: 0 2.5px;
+    width: 12.5%;
+    position: relative;
+}
+
+#playerNum {
+    background-color: rgba(192, 192, 192, 0.60);
+    width: 25%;
+    text-align: center;
+    padding: 7.5%;
+    margin: 5px auto;
+    order: 4;
+    font-size: 1.5em;
+}
