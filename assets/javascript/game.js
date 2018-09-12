@@ -29,12 +29,25 @@ console.log($airElement, $earthElement, $waterElement, $fireElement, $randomNum)
 //  ============================================
 
 function init() {
-    $('#airElement').on('click', function() {
-        alert($randomNum);
+    $('#airElement').on('click','img', function() {
+        $playerNum += $airElement;
+        $('playerNum').html(playerNum);
     });
 
+    $('#earthElement').on('click','img', function() {
+        $playerNum += $earthElement;
+        $('playerNum').html(playerNum);
+    });
 
+    $('#waterElement').on('click','img', function() {
+        $playerNum += $waterElement;
+        $('playerNum').html(playerNum);
+    });
 
+    $('#fireElement').on('click','img', function() {
+        $playerNum += $fireElement;
+        $('playerNum').html(playerNum);
+    });
 
     // Testing / Debugging
     console.log($randomNum);
