@@ -5,6 +5,8 @@ var $wins = $('#wins');
 var $loss = $('#loss');
 var $randomNum = $('#randomNum');
 var $playerNum = $('#playerNum');
+var $startGame = $('#startGame');
+var $winCount = $('winCount');
 
 var $airElement = $('#air');
 var $earthElement = $('#earth');
@@ -12,8 +14,8 @@ var $waterElement = $('#water');
 var $fireElement = $('#fire');
 
 // Counters
-var winCount = 0;
-var lossCount = 0;
+var winCounter = 0;
+var lossCounter = 0;
 var playerNumCount = 0;
 
 // Random
@@ -26,14 +28,14 @@ var fireRandom = Math.floor(Math.random()* 12) + 1;
 
 var random = Math.floor(Math.random() * 120) + 19;
 
-console.log(airRandom, earthRandom, waterRandom, fireRandom, random);
+console.log(airRandom, earthRandom, waterRandom, fireRandom);
 // Functions
 //  ============================================
 $(document).ready(function (){
 
     
     function init() {
-        debugger;
+        // debugger;
         $('#air').on('click', function() {
             playerNumCount += airRandom;
             $('#playerNum').text(playerNumCount); 
@@ -53,16 +55,54 @@ $(document).ready(function (){
             playerNumCount += fireRandom;
             $('#playerNum').html(playerNumCount);
         });
-        
-        
-        
-        // Testing / Debugging
-        // console.log($);
+
+        $('#startGame').on('click', function() {
+            $('#randomNum').text(random);
+            gameStart();
+        });
     }
+    
+    function gameStart() {
+        // debugger;
+        // var random = Math.floor(Math.random() * 120) + 19;
+        // $('#startGame').on('click', function() {
+        //     $('#randomNum').text(random);
+        //     // init()
+        // })
+
+        if(playerNumCount == random) {
+            winCounter++;
+            $('#wins').text('You Win!');
+            $('#winCount').text('Wins: ' + winCounter);
+            newGame();
+        }
+        else if(playerNumCount > random) {
+            lossCounter++;
+            $('#loss').text('You Lost!');
+            $('#lossCount').text('Losses: ' + lossCounter);
+            newGame()
+        };
+    }
+    
+    // function newGame() {
+    //     playerNumCount = 0;
+
+    //     airRandom = Math.floor(Math.random()* 12) + 1;
+    //     earthRandom = Math.floor(Math.random()* 12) + 1;
+    //     waterRandom = Math.floor(Math.random()* 12) + 1;
+    //     fireRandom = Math.floor(Math.random()* 12) + 1;
+
+    //     random = Math.floor(Math.random() * 120) + 19;
+        
+    // };
+    
+    // Testing / Debugging
+    // console.log(airRandom, earthRandom, waterRandom, fireRandom, random);
+
     // Main Process
     //  ============================================
     init()
-
+    // gameStart()
 
 
 });

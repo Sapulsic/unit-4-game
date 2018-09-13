@@ -35,7 +35,7 @@ body {
     justify-content: center;
     flex-wrap: wrap;
     text-align: center;
-    margin: 5% 25%;
+    margin: 2.5% 25%;
     /* padding: 15px 0; */
     flex: 1;
     /* left: -20%; */
@@ -46,18 +46,22 @@ body {
     background-color: rgba(192, 192, 192, 0.60);
     width: 25%;
     text-align: center;
-    padding: 7.5%;
+    padding: 5%;
     margin: 5px auto;
     order: 2;
     font-size: 1.5em;
+    border-radius: 15px;
+
 }
 
 #wonLoss {
     background-color: rgba(0, 255, 255, 0.60);
     width: 25%;
-    padding: 7.5%;
+    padding: 5%;
     margin: 5px auto 25px;
     order: 2;
+    border-radius: 15px;
+
 }
 
 #elements {
@@ -77,8 +81,9 @@ body {
     background-color: rgba(192, 192, 192, 0.60);
     width: 25%;
     text-align: center;
-    padding: 7.5%;
+    padding: 5%;
     margin: 5px auto;
     order: 4;
     font-size: 1.5em;
+    border-radius: 15px;
 }
