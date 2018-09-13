@@ -1,8 +1,8 @@
 // Global Variables
 //  ============================================
 // Arrays and Variables for initiating Data
-var $winCount = $('#wins');
-var $lossCount = $('#loss');
+var $wins = $('#wins');
+var $loss = $('#loss');
 var $randomNum = $('#randomNum');
 var $playerNum = $('#playerNum');
 
@@ -12,45 +12,34 @@ var $waterElement = $('#water');
 var $fireElement = $('#fire');
 
 // Counters
-$winCount = 0;
-$lossCount = 0;
-$playerNum = 0;
+var winCount = 0;
+var lossCount = 0;
+var playerNumCount = 0;
 
 // Random
-$airElement = Math.floor(Math.random()* 12) + 1;
-$earthElement = Math.floor(Math.random()* 12) + 1;
-$waterElement = Math.floor(Math.random()* 12) + 1;
-$fireElement = Math.floor(Math.random()* 12) + 1;
+var airRandom = Math.floor(Math.random()* 12) + 1;
+var earthRandom = Math.floor(Math.random()* 12) + 1;
+var waterRandom = Math.floor(Math.random()* 12) + 1;
+var fireRandom = Math.floor(Math.random()* 12) + 1;
 
-$randomNum = Math.floor(Math.random() * 120) + 19;
+console.log($fireElement)
 
-console.log($airElement, $earthElement, $waterElement, $fireElement, $randomNum);
+var random = Math.floor(Math.random() * 120) + 19;
+
+console.log(airRandom, earthRandom, waterRandom, fireRandom, random);
 // Functions
 //  ============================================
 
 function init() {
     $('#airElement').on('click','img', function() {
-        $playerNum += $airElement;
-        $('playerNum').html(playerNum);
+        playerNumCount += airRandom;
+        $('playerNum').html(playerNumCount);
     });
 
-    $('#earthElement').on('click','img', function() {
-        $playerNum += $earthElement;
-        $('playerNum').html(playerNum);
-    });
 
-    $('#waterElement').on('click','img', function() {
-        $playerNum += $waterElement;
-        $('playerNum').html(playerNum);
-    });
-
-    $('#fireElement').on('click','img', function() {
-        $playerNum += $fireElement;
-        $('playerNum').html(playerNum);
-    });
 
     // Testing / Debugging
-    console.log($randomNum);
+    // console.log($);
 }
 // Main Process
 //  ============================================
