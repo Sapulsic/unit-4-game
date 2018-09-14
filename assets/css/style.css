@@ -74,7 +74,14 @@ body {
     order: 2;
     font-size: 1.5em;
     border-radius: 15px;
+}
 
+#start button {
+    border-radius: 5px;
+    margin: 0 25px;
+    width: 15%;
+    padding: 10px;
+    font-weight: bold;
 }
 
 #elements {
