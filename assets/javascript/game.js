@@ -97,6 +97,14 @@ $(document).ready(function (){
         setTimeout(function() {
             $('#loss').html('');
         }, 3000);
+
+        setTimeout(function() {
+            $('#randomNum').html('');
+        }, 3000);
+
+        setTimeout(function() {
+            $('#playerNum').html('');
+        }, 3000);
         
     };
     

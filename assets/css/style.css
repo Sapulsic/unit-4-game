@@ -45,6 +45,7 @@ body {
 #elementCollector h1 {
     /* margin-bottom: 20px; */
     font-family: 'Raleway', sans-serif;
+    font-size: 1em;
 }
 
 #elementCollector h1 #aTLA {
@@ -79,7 +80,7 @@ body {
 #start button {
     border-radius: 5px;
     margin: 0 25px;
-    width: 15%;
+    /* width: 25%; */
     padding: 10px;
     font-weight: bold;
 }
