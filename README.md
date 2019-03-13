@@ -1,4 +1,4 @@
-# Element Collecter
+# Element Collector
 
 Try to add up to the number given with the elements.
 
